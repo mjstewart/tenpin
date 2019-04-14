@@ -88,7 +88,7 @@
      :rolls (into [] next-rolls)}))
 
 (defn calculate-scorecard [scorecard]
-  "Given the raw scorecard as a 2d list of frames, calculate the scores and sum the total.
+  "Given the raw scorecard as a 2d vector of frames, calculate the scores and sum the total.
    If the total is -1 then it means the game is not finished"
   (let [indexed-frames (map vector (range 0 (count scorecard)) (partition 3 1 scorecard))]
     (reduce (fn [acc [i [head & _ :as window]]]
