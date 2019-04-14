@@ -34,20 +34,22 @@ both rolls must be 0 - 10 inclusive and sum to less than 10
 `[1 3]`
 
 ### not used: 
-Not rolls yet for this frame
+No rolls yet for this frame
 
 `[-1 -1]`
 
 ### special 10th frame case
 
-If a spare is rolled on the 10th frame, 1 more roll is needed for the 11th frame. The vector must have
-its second roll fixed at zero.
+If a spare is rolled on the 10th frame, 1 more roll needs to be stored in the 11th frame. The vector must have
+its second roll fixed at zero, eg:
  
 `[5 0]`
 
 ## `calculate-scorecard :: [[Int]] -> CalculatedScorecardResult`
 transforms the raw scorecard into a calculated result. The game is complete when the total is not -1 as it
-implies every frame has sucessfully resolved its computed score.
+implies every frame has sucessfully resolved its computed score. Should the game be in a pending state,
+all frames that can resolve their scores will do so, however the total will still be -1 until all frames have
+resolved scores.
 
 where `CalculatedScorecardResult` is a map -> `{
     :calculated-scorecard [{:score Int :symbol String :rolls [Int]}] 
