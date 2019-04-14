@@ -88,7 +88,7 @@ back the updated scorecard.
 
 For example, to update the scorecards first frame with a strike
 ```
-score-frame [[-1 -1] [-1 -1] [-1 -1] [-1 -1] [-1 -1] [-1 -1] [-1 -1] [-1 -1] [-1 -1] [-1 -1] [-1 -1] [-1 -1]] 0 [10 -1])
+(score-frame [[-1 -1] [-1 -1] [-1 -1] [-1 -1] [-1 -1] [-1 -1] [-1 -1] [-1 -1] [-1 -1] [-1 -1] [-1 -1] [-1 -1]] 0 [10 -1])
 ```
 
 =>
